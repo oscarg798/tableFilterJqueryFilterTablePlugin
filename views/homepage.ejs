@@ -1,0 +1,63 @@
+<!--Los javascript se encuentran en js/dependencies
+las tables deben tener al menos mas de 10 registros 
+se necesitan los siguientes scripts-->
+<style>
+/* generic table styling */
+table { border-collapse: collapse; }
+th, td { padding: 5px; }
+th { border-bottom: 2px solid #999; background-color: #eee; vertical-align: bottom; }
+td { border-bottom: 1px solid #ccc; }
+/* filter-table specific styling */
+td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
+/* special filter field styling for this example */
+.input-filter-container { position: fixed; top: 1em; right: 1em; border: 2px solid #66f; background-color: #eef; padding: 0.5em; }
+</style>
+<script>
+$(document).ready(function() {
+console.log("ready!");
+$('table').filterTable({ // apply filterTable to all tables on this page
+inputSelector: '#input-filter' // use the existing input instead of creating a new one
+});
+});
+</script>
+<div><label for="input-filter">Filter the table:</label> <input type="search" id="input-filter" size="15" placeholder="search"></div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" title="President Number">#</th>
+            <th scope="col">President</th>
+            <th scope="col">Terms</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>George Washington</td><td>two</td></tr>
+        <tr><td>2</td><td>John Adams</td><td>one</td></tr>
+        <tr><td>3</td><td>Thomas Jefferson</td><td>two</td></tr>
+        <tr><td>4</td><td>James Madison</td><td>two</td>/tr>
+        <tr><td>5</td><td>James Monroe</td><td>two</td></tr>
+        <tr><td>6</td><td>John Quincy Adams</td><td>one</td><td>1825-1829</td></tr>
+        <tr><td>7</td><td>Andrew Jackson</td><td>two</td><td>1829-1837</td></tr>
+        <tr><td>8</td><td>Martin Van Buren</td><td>one</td><td>1837-1841</td></tr>
+        <tr><td>9</td><td>William Henry Harrison</td><td>one-partial</td><td>1841</td></tr>
+        <tr><td>10</td><td>John Tyler</td><td>one-partial</td><td>1841-1845</td></tr>
+        <tr><td>11</td><td>James Knox Polk</td><td>one</td><td>1845-1849</td></tr>
+        <tr><td>12</td><td>Zachary Taylor</td><td>one-partial</td><td>1849-1850</td></tr>
+        <tr><td>13</td><td>Millard Fillmore</td><td>one-partial</td><td>1850-1853</td></tr>
+        <tr><td>14</td><td>Franklin Pierce</td><td>one</td><td>1853-1857</td></tr>
+        <tr><td>15</td><td>James Buchanan</td><td>one</td><td>1857-1861</td></tr>
+        <tr><td>16</td><td>Abraham Lincoln</td><td>two-partial</td><td>1861-1865</td></tr>
+        <tr><td>17</td><td>Andrew Johnson</td><td>one-partial</td><td>1865-1869</td></tr>
+        <tr><td>18</td><td>Ulysses S. Grant</td><td>two</td><td>1869-1877</td></tr>
+        <tr><td>19</td><td>Rutherford Birchard Hayes</td><td>one</td><td>1877-1881</td></tr>
+        <tr><td>20</td><td>James Abram Garfield</td><td>one-partial</td><td>1881</td></tr>
+        <tr><td>21</td><td>Chester Alan Arthur</td><td>one-partial</td><td>1881-1885</td></tr>
+        <tr><td>22</td><td>Grover Cleveland</td><td>one</td><td>1885-1889</td></tr>
+        <tr><td>23</td><td>Benjamin Harrison</td><td>one</td><td>1889-1893</td></tr>
+        <tr><td>24</td><td>Grover Cleveland</td><td>one-again</td><td>1893-1897</td></tr>
+        <tr><td>25</td><td>William McKinley</td><td>two-partial</td><td>1897-1901</td></tr>
+        <tr><td>26</td><td>Theodore Roosevelt</td><td>two-partial</td><td>1901-1909</td></tr>
+        <tr><td>27</td><td>William Howard Taft</td><td>one</td><td>1909-1913</td></tr>
+    </tbody>
+</table>
